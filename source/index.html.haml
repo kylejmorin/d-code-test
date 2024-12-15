@@ -36,7 +36,7 @@
           - users.each do |user|
             .user.display-flex.flex-row.align-center
               .avatar
-                %object{ data: "images/empty-state-avatar-alt.svg" }
+                %object{ data: "images/empty-state-avatar-alt.svg", alt: user[:name] }
               .user-body
                 %p.sm.compact= user[:name]
                 %p.x-small.compact.text-muted= user[:location]
