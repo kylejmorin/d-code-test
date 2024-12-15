@@ -1,3 +1,44 @@
+%main.container
+  .row
 
+    // Left column
+    .col-xs-12.col-md-3
+      %section
+        .card
+          %h3 Hello World
+          %p.condensed.m-t-15 This is some regular text
+          %a.btn.btn-primary.m-t-15{ href: "https://www.doximity.com/", target: "_blank" } Let's Go
+          .dropdown.m-t-15
+            %a.btn.btn-secondary.display-flex{ href: "#" }
+              %span.flex-grow Option 1
+              %img{ src: "images/icon-arrow-down.svg" }
+            %ul.dropdown-menu
+              - (1..3).each do |i|
+                %li
+                  %a{ href: "#" } Option #{i}
 
-%h1 this is my page
+    // Middle column
+    .col-xs-12.col-md-6
+      %section
+        .card-group.display-grid
+          - (1..3).each do |i|
+            .card.empty-state.text-center.display-flex.align-center.justify-center
+              %h2 Card #{i}
+
+    // Right column
+    .col-xs-12.col-md-3
+      %section
+        .card
+          %h3 This is a List
+          %p.small.m-t-10.m-b-10 This is some regular text
+
+          - users = [ { name: "John Stevens", location: "San Francisco, CA" }, { name: "Laura Thomas", location: "Oakland, CA" }, { name: "Janet Wilson", location: "Santa Clara, CA" } ]
+          - users.each do |user|
+            .user.display-flex.flex-row.align-center
+              .avatar
+                %object{ data: "images/empty-state-avatar-alt.svg" }
+              .user-body
+                %p.sm.compact= user[:name]
+                %p.x-small.compact.text-muted= user[:location]
+              %button.icon-btn.m-l-10{ aria: { label: "Add" } }
+                %img{ src: "images/icon-plus.svg" }
