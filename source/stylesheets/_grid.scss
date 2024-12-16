@@ -1,5 +1,5 @@
 .container {
-  width: 90%;
+  width: $width;
   margin-left: auto;
   margin-right: auto;
 
@@ -30,7 +30,7 @@
  * $fg-class-off string used for the offset class
  */
  $fg-columns: 12 !default;
- $fg-gutter: 10px !default;
+ $fg-gutter: $gutter !default;
  
  $fg-class-row: 'row' !default;
  $fg-class-col: 'col' !default;
@@ -56,9 +56,9 @@
   */
  $fg-breakpoints: (
    (xs),
-   (sm, 768px),
-   (md, 992px),
-   (lg, 1200px)
+   (sm, $breakpoint-med),
+   (md, $breakpoint-large),
+   (lg, $breakpoint-x-large)
  ) !default;
  
  /**

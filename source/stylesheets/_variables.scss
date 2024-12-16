@@ -2,11 +2,12 @@ $body-background: #F5F5F5;
 $white: #FFFFFF;
 
 // Grid
-$width: 96%;
-$gutter: 4%;
+$width: 90%;
+$gutter: 10px;
 $breakpoint-small: 33.75em; // 540px
 $breakpoint-med: 45em; // 720px
 $breakpoint-large: 60em; // 960px
+$breakpoint-x-large: 75em; // 1200px
 
 // Font
 $font-size-base: 1rem;
