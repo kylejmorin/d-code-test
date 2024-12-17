@@ -82,12 +82,14 @@ p {
 .btn {
   display: inline-block;
   height: 40px;
-  padding: 11px 19px;
+  padding: 6px 19px;
   font-weight: 700;
   font-size: $font-size-base;
   text-align: center;
   text-decoration: none;
   border-radius: $border-radius;
+  border: $border-width solid transparent;
+  cursor: pointer;
   &.btn-primary {
     color: $white;
     background-color: $primary-bg;
